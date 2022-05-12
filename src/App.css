@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,79 @@
   to {
     transform: rotate(360deg);
   }
+}
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background:white;
+}
+
+.main-image-1{
+  height: 100vh;
+  color: #fff;
+  line-height: 100vh;
+  text-align: "center";
+  background-image: url("assets/dada.jpg");
+  background-size: cover;
+}
+
+.main-image-2{
+  height: 100vh;
+  color: #fff;
+  line-height: 100vh;
+  text-align: "center";
+  background-image: url("assets/big-family.jpg");
+  background-size: cover;
+}
+
+.main-image-3{
+  height: 100vh;
+  color: #fff;
+  line-height: 100vh;
+  text-align: "center";
+  background-image: url("assets/old.jpg");
+  background-size: cover;
+}
+
+.main-text{
+  margin-top: 25vh;
+  height: 50vh;
+  color: #fff;
+  line-height: 25vh;
+  text-align: "center";
+  background: rgba(0,0,0,0.4);
+}
+
+.main-text-1{
+  margin-top: 25vh;
+  height: 50vh;
+  color: #fff;
+  line-height: 25vh;
+  text-align: "center";
+  background: rgba(0,0,0,0.4);
+}
+
+.main-div{
+  margin-top: 25vh;
+  height: 50vh;
+  color: #fff;
+  line-height: 25vh;
+  text-align: "center";
+  background: rgba(0,0,0,0.4);
 }
