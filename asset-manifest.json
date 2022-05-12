@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/poemsbydad/static/css/main.e70df7fc.css",
-    "main.js": "/poemsbydad/static/js/main.22af00ed.js",
+    "main.js": "/poemsbydad/static/js/main.3fd0628d.js",
     "static/js/787.28cb0dcd.chunk.js": "/poemsbydad/static/js/787.28cb0dcd.chunk.js",
     "static/media/big-family.jpg": "/poemsbydad/static/media/big-family.6546d93722f4105b9c82.jpg",
     "static/media/dada.jpg": "/poemsbydad/static/media/dada.eca9f06ace14f3540126.jpg",
     "static/media/old.jpg": "/poemsbydad/static/media/old.e4fe1290e3ff3b21f0c0.jpg",
+    "static/media/family.jpg": "/poemsbydad/static/media/family.1b77c5533419ffbeadf7.jpg",
     "index.html": "/poemsbydad/index.html",
     "main.e70df7fc.css.map": "/poemsbydad/static/css/main.e70df7fc.css.map",
-    "main.22af00ed.js.map": "/poemsbydad/static/js/main.22af00ed.js.map",
+    "main.3fd0628d.js.map": "/poemsbydad/static/js/main.3fd0628d.js.map",
     "787.28cb0dcd.chunk.js.map": "/poemsbydad/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e70df7fc.css",
-    "static/js/main.22af00ed.js"
+    "static/js/main.3fd0628d.js"
   ]
 }
