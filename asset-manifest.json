@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/poemsbydad/static/css/main.8704b542.css",
-    "main.js": "/poemsbydad/static/js/main.5625b39b.js",
+    "main.js": "/poemsbydad/static/js/main.e0c9281d.js",
     "static/js/787.28cb0dcd.chunk.js": "/poemsbydad/static/js/787.28cb0dcd.chunk.js",
     "static/media/big-family.jpg": "/poemsbydad/static/media/big-family.6546d93722f4105b9c82.jpg",
     "static/media/old-big-family.jpg": "/poemsbydad/static/media/old-big-family.f82001343e8af7bd2ef7.jpg",
@@ -11,11 +11,11 @@
     "static/media/family.jpg": "/poemsbydad/static/media/family.1b77c5533419ffbeadf7.jpg",
     "index.html": "/poemsbydad/index.html",
     "main.8704b542.css.map": "/poemsbydad/static/css/main.8704b542.css.map",
-    "main.5625b39b.js.map": "/poemsbydad/static/js/main.5625b39b.js.map",
+    "main.e0c9281d.js.map": "/poemsbydad/static/js/main.e0c9281d.js.map",
     "787.28cb0dcd.chunk.js.map": "/poemsbydad/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8704b542.css",
-    "static/js/main.5625b39b.js"
+    "static/js/main.e0c9281d.js"
   ]
 }
