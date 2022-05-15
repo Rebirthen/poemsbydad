@@ -11,9 +11,9 @@ import {
 const { Header, Content, Footer } = Layout;
 
 
-const {Meta} = Card;
+const { Meta } = Card;
 
-const {Paragraph, Text} = Typography;
+const { Paragraph, Text } = Typography;
 
 
 class MainContent extends React.Component {
@@ -40,7 +40,7 @@ class MainContent extends React.Component {
   onClick = (item) => {
     console.log("clicked", item);
     this.setState({ selectedIndex: item.key, collapsed: !this.state.collapsed });
-    window.scrollTo(0,window.innerHeight*2);
+    window.scrollTo(0, window.innerHeight * 2);
   }
 
   openModal = () => {
@@ -63,46 +63,46 @@ class MainContent extends React.Component {
               minHeight: '100vh',
             }}
           >
-               <Row gutter={[30,30]}>
-                <Col xs={24} sm={24} md={12} lg={12} ><Image top={50} width={300} src={imager.one}> </Image></Col>
-                <Col xs={24} sm={24} md={12} lg={12}>
-                    {DB[0]["poems"][0]["text"].split("\n").map(e => 
-                      <Typography.Title level={5} style={{ margin: 0 }}>
-                      {e}
-                    </Typography.Title>)}
-                    <br/>
+            <Row gutter={[30, 30]}>
+              <Col xs={24} sm={24} md={12} lg={12} ><Image top={50} width={300} src={imager.one}> </Image></Col>
+              <Col xs={24} sm={24} md={12} lg={12}>
+                {DB[0]["poems"][0]["text"].split("\n").map(e =>
+                  <Typography.Title level={5} style={{ margin: 0 }}>
+                    {e}
+                  </Typography.Title>)}
+                <br />
 
-                    {(DB[0]["poems"][0]["footer"] || "").split("\n").map(e => <Paragraph disabled>{e}</Paragraph>)}
-                    
-                </Col>
-               </Row>
-            
-            
+                {(DB[0]["poems"][0]["footer"] || "").split("\n").map(e => <Paragraph disabled>{e}</Paragraph>)}
+
+              </Col>
+            </Row>
+
+
           </Content>
           <Header className="site-layout-background" style={{ padding: 0 }}>
             <h3>Өлеңдер </h3>
           </Header>
           <Layout>
-          <Content
-            className="site-layout-background"
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              minHeight: '100vh',
-            }}
-          >
-            {!collapsed && <Breadcrumb style={{ marginBottom: '20px' }}>
-              <Breadcrumb.Item onClick={this.toggle}>Басты парақ</Breadcrumb.Item>
-              <Breadcrumb.Item >
-                {DB[selectedIndex]["label"]}
-              </Breadcrumb.Item>
-            </Breadcrumb>}
-            {collapsed ? this.renderCategories()
-              :
+            <Content
+              className="site-layout-background"
+              style={{
+                margin: '24px 16px',
+                padding: 24,
+                minHeight: '100vh',
+              }}
+            >
+              {!collapsed && <Breadcrumb style={{ marginBottom: '20px' }}>
+                <Breadcrumb.Item onClick={this.toggle}>Басты парақ</Breadcrumb.Item>
+                <Breadcrumb.Item >
+                  {DB[selectedIndex]["label"]}
+                </Breadcrumb.Item>
+              </Breadcrumb>}
+              {collapsed ? this.renderCategories()
+                :
 
-              this.renderPoems(selectedIndex)
-            }
-          </Content>
+                this.renderPoems(selectedIndex)
+              }
+            </Content>
           </Layout>
           <Footer
             style={{
@@ -124,15 +124,15 @@ class MainContent extends React.Component {
       onOk={this.openModal}
       onCancel={this.openModal}
       closable={true}
-      style={{textAlign:"center"}}
+      style={{ textAlign: "center" }}
       footer={[
         <Button onClick={this.openModal}>Шығу</Button>
       ]}
     >
-      {(selectedPoem["citate"] || "").split("\n").map(e => <Paragraph italic style={{textAlign:"right"}}>{e}</Paragraph>)}
-      <Paragraph strong italic style={{textAlign:"right"}}>{selectedPoem["citateAuthor"]}</Paragraph>
+      {(selectedPoem["citate"] || "").split("\n").map(e => <Paragraph italic style={{ textAlign: "right" }}>{e}</Paragraph>)}
+      <Paragraph strong italic style={{ textAlign: "right" }}>{selectedPoem["citateAuthor"]}</Paragraph>
       {(selectedPoem["text"] || "").split("\n").map(e => <Paragraph>{e}</Paragraph>)}
-      {(selectedPoem["footer"] || "").split("\n").map(e => <Paragraph disabledgit >{e}</Paragraph>)}
+      {(selectedPoem["footer"] || "").split("\n").map(e => <Paragraph disabled>{e}</Paragraph>)}
     </Modal>;
   }
 
@@ -142,7 +142,7 @@ class MainContent extends React.Component {
 
         {DB.map((category) => {
           return (
-            <Col xs={32} sm={12} md={12} lg={8} xl={6} style={{ marginTop: '20px',alignContent: "center" }}>
+            <Col xs={32} sm={12} md={12} lg={8} xl={6} style={{ marginTop: '20px', alignContent: "center" }}>
               <Card
                 style={{ width: 300 }}
                 title={category["label"]}
@@ -155,7 +155,7 @@ class MainContent extends React.Component {
                 }
                 extra={<Button onClick={() => this.onClick(category)}>Қарау</Button>}
               >
-                    <Meta description={category["description"]} />
+                <Meta description={category["description"]} />
 
               </Card>
             </Col>
@@ -173,7 +173,7 @@ class MainContent extends React.Component {
       <Row gutter={{ md: 16, sm: 32, lg: 16 }}>
         {DB[selectedIndex]["poems"].map((poem, i) => {
           return (
-            <Col xs={32} sm={12} md={12} lg={8} xl={6} style={{ marginTop: '20px',alignContent: "center" }}>
+            <Col xs={32} sm={12} md={12} lg={8} xl={6} style={{ marginTop: '20px', alignContent: "center" }}>
               <Card
                 style={{ width: 300 }}
                 title={poem["name"]}
@@ -181,15 +181,15 @@ class MainContent extends React.Component {
                 cover={imager[poem.imageUrl] && <img
                   alt="example"
                   src={imager[poem.imageUrl]} />}
-                  actions={
-                    [
-                      <EllipsisOutlined key={i} onClick={() => this.onSelectText(poem)}/>
-                    ]
-                  }
+                actions={
+                  [
+                    <EllipsisOutlined key={i} onClick={() => this.onSelectText(poem)} />
+                  ]
+                }
               >
 
                 {poem["text"].split("\n").slice(0, 3).map(e => <p>{e}</p>)}
-                
+
 
               </Card>
             </Col>

@@ -14,7 +14,6 @@ class MainPage extends React.Component {
     };
 
     this.carousel = React.createRef();
-    this.myRef = React.createRef()
 
   }
 
@@ -48,44 +47,48 @@ class MainPage extends React.Component {
     return (
       <div>
         <div style={{ position: "relative" }}>
-          <Carousel ref={node => (this.carousel = node)} afterChange={this.onChange} autoplay >
-            <div className='main-image-1'>
-              <div className='main-div'>
-                <h1 className='main-text-1'>Салем;</h1>
-                <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
-              </div>
-            </div>
-            <div className='main-image-2'>
-              <div className='main-div'>
-                <h1 className='main-text-1'>Салем;</h1>
-                <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
-              </div>
-            </div>
-            <div className='main-image-3'>
-              <div className='main-div'>
-                <h1 className='main-text-1'>Салем;</h1>
-                <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
-              </div>
-            </div>
-          </Carousel>
+          {this.renderCarousel()}
           <div style={{ position: "absolute", top: "50%", transform: "translate(50%, -50%)" }} onClick={this.goToLeft}>
             <LeftOutlined style={{ color: "yellow", fontSize: "45px" }} size={200} />
           </div>
           <div style={{ position: "absolute", top: "50%", right: "0%", transform: "translate(-50%, -50%)" }} onClick={this.goToRight}>
             <RightOutlined style={{ color: "yellow", fontSize: "45px" }} size={200} />
           </div>
-          <div style={{ position: "absolute", top: "90%", left: "50%", transform: "translate(-50%, -50%)", justifyContent: "center", alignItems: "center"}} onClick={() =>window.scrollTo({
-  top: window.innerHeight,
-  behavior: 'smooth'
-})}>
-            <DownOutlined style={{ color: "white", fontSize: "45px", alignContent: "center"  }} size={200} />
+          <div style={{ position: "absolute", top: "90%", left: "50%", transform: "translate(-50%, -50%)", justifyContent: "center", alignItems: "center" }} onClick={() => window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+          })}>
+            <DownOutlined style={{ color: "white", fontSize: "45px", alignContent: "center" }} size={200} />
           </div>
         </div>
-        <MainContent/>
+        <MainContent />
       </div>
     );
 
 
+  }
+
+  renderCarousel() {
+    return <Carousel ref={node => (this.carousel = node)} afterChange={this.onChange} autoplay>
+      <div className='main-image-1'>
+        <div className='main-div'>
+          <h1 className='main-text-1'>Сәлем;</h1>
+          <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
+        </div>
+      </div>
+      <div className='main-image-2'>
+        <div className='main-div'>
+          <h1 className='main-text-1'>Сәлем;</h1>
+          <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
+        </div>
+      </div>
+      <div className='main-image-3'>
+        <div className='main-div'>
+          <h1 className='main-text-1'>Сәлем;</h1>
+          <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
+        </div>
+      </div>
+    </Carousel>;
   }
 }
 
