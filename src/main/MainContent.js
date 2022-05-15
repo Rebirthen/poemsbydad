@@ -70,6 +70,9 @@ class MainContent extends React.Component {
                       <Typography.Title level={5} style={{ margin: 0 }}>
                       {e}
                     </Typography.Title>)}
+                    <br/>
+
+                    {(DB[0]["poems"][0]["footer"] || "").split("\n").map(e => <Paragraph disabled>{e}</Paragraph>)}
                     
                 </Col>
                </Row>
@@ -129,7 +132,7 @@ class MainContent extends React.Component {
       {(selectedPoem["citate"] || "").split("\n").map(e => <Paragraph italic style={{textAlign:"right"}}>{e}</Paragraph>)}
       <Paragraph strong italic style={{textAlign:"right"}}>{selectedPoem["citateAuthor"]}</Paragraph>
       {(selectedPoem["text"] || "").split("\n").map(e => <Paragraph>{e}</Paragraph>)}
-      {(selectedPoem["footer"] || "").split("\n").map(e => <Paragraph disabled>{e}</Paragraph>)}
+      {(selectedPoem["footer"] || "").split("\n").map(e => <Paragraph disabledgit >{e}</Paragraph>)}
     </Modal>;
   }
 
