@@ -86,28 +86,28 @@
 }
 
 .main-text{
-  margin-top: 25vh;
-  height: 50vh;
   color: #fff;
-  line-height: 25vh;
-  text-align: "center";
-  background: rgba(0,0,0,0.4);
+  line-height: 10vh;
 }
 
 .main-text-1{
-  margin-top: 25vh;
-  height: 50vh;
+  padding-top: 40vh;
+  font-size: 60px;
   color: #fff;
-  line-height: 25vh;
-  text-align: "center";
-  background: rgba(0,0,0,0.4);
+  line-height: 5vh;
 }
 
 .main-div{
-  margin-top: 25vh;
-  height: 50vh;
+  height: 100vh;
   color: #fff;
-  line-height: 25vh;
   text-align: "center";
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  font-size: inherit;
+  color: currentColor;
 }
