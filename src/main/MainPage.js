@@ -1,6 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import '../index.css';
+import '../App.css';
 import { Carousel } from 'antd';
 import MainContent from './MainContent';
 import { DownOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';

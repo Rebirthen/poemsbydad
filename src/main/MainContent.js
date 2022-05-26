@@ -13,7 +13,7 @@ const { Header, Content, Footer } = Layout;
 
 const { Meta } = Card;
 
-const { Paragraph, Text } = Typography;
+const { Paragraph } = Typography;
 
 
 class MainContent extends React.Component {

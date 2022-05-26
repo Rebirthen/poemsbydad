@@ -87,12 +87,13 @@
 
 .main-text{
   color: #fff;
+  font-size: 40px;
   line-height: 10vh;
 }
 
 .main-text-1{
   padding-top: 40vh;
-  font-size: 60px;
+  font-size: 80px;
   color: #fff;
   line-height: 5vh;
 }
