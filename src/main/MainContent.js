@@ -183,7 +183,7 @@ class MainContent extends React.Component {
                   src={imager[poem.imageUrl]} />}
                 actions={
                   [
-                    <EllipsisOutlined key={i} onClick={() => this.onSelectText(poem)} />
+                    <Button type="dashed" key={i} onClick={() => this.onSelectText(poem)} >Толық нұсқасын оқу</Button>
                   ]
                 }
               >
