@@ -5,9 +5,7 @@ import { Button, Layout } from 'antd';
 import DB from '../db.json';
 import { Card, Col, Row, Modal, Breadcrumb, Image, Typography } from 'antd';
 import { imager } from './images';
-import {
-  EllipsisOutlined
-} from "@ant-design/icons";
+import HTMLFlipBook from 'react-pageflip';
 const { Header, Content, Footer } = Layout;
 
 
@@ -47,6 +45,42 @@ class MainContent extends React.Component {
     this.setState({ isModalVisible: false })
   }
 
+  MyBook(props) {
+    return (
+      <HTMLFlipBook
+      width={300} height={500}
+      >
+
+        {DB[this.state.selectedIndex]["poems"].map((poem, i) => {
+          return (
+            <Col xs={32} sm={12} md={12} lg={8} xl={6} style={{ marginTop: '20px', alignContent: "center" }}>
+              <Card
+                style={{ width: 300 }}
+                title={poem["name"].split("\n").map(e => <p>{e}</p>)}
+                key={i}
+                cover={imager[poem.imageUrl] && <img
+                  alt="example"
+                  src={imager[poem.imageUrl]} />}
+                actions={
+                  [
+                    <Button type="dashed" key={i} onClick={() => this.onSelectText(poem)} >Толық нұсқасын оқу</Button>
+                  ]
+                }
+              >
+
+                {poem["text"].split("\n").slice(0, 3).map(e => <p>{e}</p>)}
+
+
+              </Card>
+            </Col>
+          );
+
+        }
+        )}
+      </HTMLFlipBook>
+    );
+  }
+
   render() {
     let { selectedIndex, collapsed, isModalVisible, selectedPoem } = this.state;
     return (
@@ -79,6 +113,9 @@ class MainContent extends React.Component {
 
 
           </Content>
+          {/* <Content>
+            {this.MyBook()}
+          </Content> */}
           <Header className="site-layout-background" style={{ padding: 0 }}>
             <h3>Өлеңдер </h3>
           </Header>
@@ -176,7 +213,7 @@ class MainContent extends React.Component {
             <Col xs={32} sm={12} md={12} lg={8} xl={6} style={{ marginTop: '20px', alignContent: "center" }}>
               <Card
                 style={{ width: 300 }}
-                title={poem["name"]}
+                title={poem["name"].split("\n").map(e => <p>{e}</p>)}
                 key={i}
                 cover={imager[poem.imageUrl] && <img
                   alt="example"
