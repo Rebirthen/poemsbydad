@@ -70,23 +70,19 @@ class MainPage extends React.Component {
   }
 
   renderCarousel() {
-    return <Carousel ref={node => (this.carousel = node)} afterChange={this.onChange} autoplay>
+    return <Carousel ref={node => (this.carousel = node)} afterChange={this.onChange}>
       <div className='main-image-1'>
         <div className='main-div'>
-          <h1 className='main-text-1'>Сәлем;</h1>
-          <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
+          <h1 className='main-text-1'>Әкемнің өлеңдері</h1>
+          <h1 className='main-text'>Бұл парақша – Темирханов Палуанбектің қаламынан шыққан жырларға арналған.</h1>
         </div>
       </div>
       <div className='main-image-2'>
         <div className='main-div'>
-          <h1 className='main-text-1'>Сәлем;</h1>
-          <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
         </div>
       </div>
       <div className='main-image-3'>
         <div className='main-div'>
-          <h1 className='main-text-1'>Сәлем;</h1>
-          <h1 className='main-text'>Менiң атым Темирханов Палуанбек. Бұл менің жеке блогым.</h1>
         </div>
       </div>
     </Carousel>;

@@ -63,7 +63,7 @@
   color: #fff;
   line-height: 100vh;
   text-align: "center";
-  background-image: url("assets/dada.jpg");
+  background-image: url("assets/dancingdad.jpg");
   background-size: cover;
 }
 
@@ -72,7 +72,7 @@
   color: #fff;
   line-height: 100vh;
   text-align: "center";
-  background-image: url("assets/big-family.jpg");
+  background-image: url("assets/mamaipapa.jpg");
   background-size: cover;
 }
 
@@ -85,17 +85,40 @@
   background-size: cover;
 }
 
-.main-text{
+.main-text {
   color: #fff;
-  font-size: 40px;
-  line-height: 10vh;
+  font-size: 2rem; /* Use rem for relative sizing */
+  line-height: 1.2; /* Adjust line-height for readability */
 }
 
-.main-text-1{
-  padding-top: 40vh;
-  font-size: 80px;
+.main-text-1 {
+  padding-top: 40vh; /* Adjust padding as needed */
+  font-size: 4rem; /* Use rem for relative sizing */
   color: #fff;
-  line-height: 5vh;
+  line-height: 1.1; /* Adjust line-height for readability */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 1.5rem;
+  }
+
+  .main-text-1 {
+    font-size: 3rem;
+    padding-top: 50vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-text {
+    font-size: 1.2rem;
+  }
+
+  .main-text-1 {
+    font-size: 2rem;
+    padding-top: 50vh;
+  }
 }
 
 .main-div{
