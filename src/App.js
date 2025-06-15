@@ -8,7 +8,7 @@ import {Admin} from './main/admin/Admin';
 function App() {
   return (
     <div className="App">
-    <BrowserRouter basename='/poemsbydad'>
+    <BrowserRouter basename='/'>
     <Routes>
 
       <Route path="/" element={<MainPage />} />
