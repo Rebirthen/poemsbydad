@@ -138,6 +138,11 @@
   }
 }
 
+.ayat-block{
+  font-size: 1.1rem;
+  padding-top: 50vh;
+}
+
 .main-div{
   height: 100vh;
   color: #fff;

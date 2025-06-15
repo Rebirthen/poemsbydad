@@ -83,6 +83,10 @@ class MainPage extends React.Component {
       </div>
       <div className='main-image main-image-3'>
         <div className='main-div'>
+          <div class="ayat-block">
+          <p><strong>"Біз, расында, Аллаһқа тәнбіз және Оған қайтамыз."</strong></p>
+          <p><em>(Бақара сүресі, 156-аят)</em></p>
+        </div>
         </div>
       </div>
     </Carousel>;
