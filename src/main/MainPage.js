@@ -71,17 +71,17 @@ class MainPage extends React.Component {
 
   renderCarousel() {
     return <Carousel ref={node => (this.carousel = node)} afterChange={this.onChange}>
-      <div className='main-image-1'>
+      <div className='main-image main-image-1'>
         <div className='main-div'>
           <h1 className='main-text-1'>Әкемнің өлеңдері</h1>
           <h1 className='main-text'>Бұл парақша – Темирханов Палуанбектің қаламынан шыққан жырларға арналған.</h1>
         </div>
       </div>
-      <div className='main-image-2'>
+      <div className='main-image main-image-2'>
         <div className='main-div'>
         </div>
       </div>
-      <div className='main-image-3'>
+      <div className='main-image main-image-3'>
         <div className='main-div'>
         </div>
       </div>

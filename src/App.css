@@ -58,31 +58,42 @@
   background:white;
 }
 
-.main-image-1{
+.main-image {
   height: 100vh;
-  color: #fff;
-  line-height: 100vh;
-  text-align: "center";
-  background-image: url("assets/dancingdad.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-size: cover;
+  background-position: center;
+  color: #fff; /* Ensure text is visible */
 }
 
-.main-image-2{
-  height: 100vh;
-  color: #fff;
-  line-height: 100vh;
-  text-align: "center";
+.main-image-1 {
+  background-image: url("assets/dancingdad_gray.jpg");
+}
+
+.main-image-2 {
   background-image: url("assets/mamaipapa.jpg");
-  background-size: cover;
 }
 
-.main-image-3{
-  height: 100vh;
-  color: #fff;
-  line-height: 100vh;
-  text-align: "center";
+.main-image-3 {
   background-image: url("assets/old.jpg");
-  background-size: cover;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .main-image {
+    height: 70vh; /* Reduce height for smaller screens */
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media (max-width: 576px) {
+  .main-image {
+    height: 50vh; /* Further reduce height for very small screens */
+  }
 }
 
 .main-text {
@@ -100,6 +111,9 @@
 
 /* Add media queries for responsiveness */
 @media (max-width: 768px) {
+  .main-image {
+    height: 100vh;
+  }
   .main-text {
     font-size: 1.5rem;
   }
@@ -111,6 +125,9 @@
 }
 
 @media (max-width: 576px) {
+   .main-image {
+    height: 100vh;
+  }
   .main-text {
     font-size: 1.2rem;
   }
