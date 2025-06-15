@@ -241,4 +241,5 @@ class MainContent extends React.Component {
   }
 }
 
-export default () => <MainContent />;
+const MainContentExport = () => <MainContent />;
+export default MainContentExport;
