@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+ReactGA.initialize('G-MV2Z43V552'); // Replace with your GA4 Measurement ID
+
+ReactGA.send('pageview');
 root.render(
   <React.StrictMode>
     <App />
