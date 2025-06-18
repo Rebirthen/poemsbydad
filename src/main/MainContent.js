@@ -1,5 +1,4 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 import '../index.css';
 import { Button, Layout } from 'antd';
 import DB from '../db.json';

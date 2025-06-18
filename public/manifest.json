@@ -3,17 +3,17 @@
   "name": "Темирхан Палуанбек",
   "icons": [
     {
-      "src": "%PUBLIC_URL%/logo.svg",
+      "src": "./logo.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/svg+xml"
     },
     {
-      "src": "%PUBLIC_URL%/logo.svg",
+      "src": ".logo.svg",
       "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "%PUBLIC_URL%/logo.svg",
+      "src": "./logo.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
     }

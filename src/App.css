@@ -157,3 +157,9 @@
   font-size: inherit;
   color: currentColor;
 }
+
+.ant-card-cover img {
+  height: 300px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
