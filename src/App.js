@@ -7,14 +7,12 @@ import { BrowserRouter,
 import {Admin} from './main/admin/Admin';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
 function App() {
-  const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
-  }, [location]);
+    ReactGA.send({ hitType: "pageview", page: "home" });
+  }, ["home"]);
 
   return (
     <div className="App">
