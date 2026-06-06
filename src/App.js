@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: "home" });
-  }, ["home"]);
+  }, []);
 
   return (
     <div className="App">
