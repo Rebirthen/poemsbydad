@@ -48,18 +48,18 @@ class MainPage extends React.Component {
       <div>
         <div style={{ position: "relative" }}>
           {this.renderCarousel()}
-          <div style={{ position: "absolute", top: "50%", transform: "translate(50%, -50%)" }} onClick={this.goToLeft}>
-            <LeftOutlined style={{ color: "yellow", fontSize: "45px" }} size={200} />
-          </div>
-          <div style={{ position: "absolute", top: "50%", right: "0%", transform: "translate(-50%, -50%)" }} onClick={this.goToRight}>
-            <RightOutlined style={{ color: "yellow", fontSize: "45px" }} size={200} />
-          </div>
-          <div style={{ position: "absolute", top: "90%", left: "50%", transform: "translate(-50%, -50%)", justifyContent: "center", alignItems: "center" }} onClick={() => window.scrollTo({
+          <button className="carousel-control left" aria-label="Previous" onClick={this.goToLeft}>
+            <LeftOutlined />
+          </button>
+          <button className="carousel-control right" aria-label="Next" onClick={this.goToRight}>
+            <RightOutlined />
+          </button>
+          <button className="scroll-down" aria-label="Scroll down" onClick={() => window.scrollTo({
             top: window.innerHeight,
             behavior: 'smooth'
           })}>
-            <DownOutlined style={{ color: "white", fontSize: "45px", alignContent: "center" }} size={200} />
-          </div>
+            <DownOutlined />
+          </button>
         </div>
         <MainContent />
       </div>
@@ -82,7 +82,7 @@ class MainPage extends React.Component {
       </div>
       <div className='main-image main-image-3'>
         <div className='main-div'>
-          <div class="ayat-block">
+          <div className="ayat-block">
           <p><strong>"Біз, расында, Аллаһқа тәнбіз және Оған қайтамыз."</strong></p>
           <p><em>(Бақара сүресі, 156-аят)</em></p>
         </div>

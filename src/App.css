@@ -98,15 +98,19 @@
 
 .main-text {
   color: #fff;
-  font-size: 2rem; /* Use rem for relative sizing */
-  line-height: 1.2; /* Adjust line-height for readability */
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  line-height: 1.35; /* Adjust line-height for readability */
+  max-width: 900px;
+  margin: 0.5rem auto;
 }
 
 .main-text-1 {
-  padding-top: 40vh; /* Adjust padding as needed */
-  font-size: 4rem; /* Use rem for relative sizing */
+  font-size: clamp(1.6rem, 5vw, 3.75rem);
   color: #fff;
-  line-height: 1.1; /* Adjust line-height for readability */
+  line-height: 1.05; /* Adjust line-height for readability */
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 /* Add media queries for responsiveness */
@@ -139,15 +143,71 @@
 }
 
 .ayat-block{
-  font-size: 1.1rem;
-  padding-top: 50vh;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  max-width: 800px;
 }
+
 
 .main-div{
   height: 100vh;
   color: #fff;
-  text-align: "center";
-  background: rgba(0,0,0,0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+}
+
+/* Carousel control buttons */
+.carousel-control{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: #ffd54f;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-control.left{ left: 1rem; }
+.carousel-control.right{ right: 1rem; }
+
+.carousel-control:hover{ transform: translateY(-50%) scale(1.06); background: rgba(0,0,0,0.5); }
+.carousel-control svg { font-size: 28px; }
+
+/* Scroll down button */
+.scroll-down{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: bounce 2.6s infinite;
+}
+
+@keyframes bounce{
+  0%,20%,50%,80%,100%{ transform: translateX(-50%) translateY(0); }
+  40%{ transform: translateX(-50%) translateY(-10px); }
+  60%{ transform: translateX(-50%) translateY(-6px); }
 }
 
 .ant-carousel .slick-prev,
